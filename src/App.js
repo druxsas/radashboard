@@ -12,13 +12,10 @@ export default function DashboardDesktop() {
       {/* Sidebar */}
       <Sidebar />
       
-      {/* Header */}
-      <div className="absolute left-[319px] top-0 w-[calc(100%-319px)]">
-        <Header />
-      </div>
-      
       {/* Main Content */}
-      <div className="absolute bg-[#faf9ff] box-border content-stretch flex flex-col gap-6 h-full items-start justify-start left-[319px] pt-[112px] px-6 pb-6 top-0 w-[calc(100%-319px)]" data-name="main-content" data-node-id="17:64">
+      <div className="absolute bg-[#faf9ff] box-border content-stretch flex flex-col gap-6 h-full items-start justify-start left-[319px] p-6 top-0 w-[calc(100%-319px)]" data-name="main-content" data-node-id="17:64">
+        {/* Header */}
+        <Header />
         
         {/* Dashboard Title */}
         <div className="content-stretch flex items-center justify-between relative shrink-0 w-full mb-6">
