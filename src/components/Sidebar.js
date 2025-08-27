@@ -22,7 +22,7 @@ export default function Sidebar() {
           <div className="h-[32.432px] relative shrink-0 w-[47.688px]" data-node-id="23:365">
             <img alt="" className="block max-w-none size-full" src={imgGroup15} />
           </div>
-          <div className="bg-clip-text font-['SF_Pro_Display:Bold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[29px] text-nowrap" data-node-id="17:12" style={{ WebkitTextFillColor: "transparent" }}>
+          <div className="font-['Inter',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[29px] text-nowrap" data-node-id="17:12" style={{ background: "linear-gradient(255deg, #1F1847 36.47%, #7061C6 81.75%)", backgroundClip: "text", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
             <p className="leading-[normal] whitespace-pre">RA_Finance</p>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/layout-dashboard" data-node-id="17:18">
               <img alt="" className="block max-w-none size-full" src={imgLucideLayoutDashboard} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[24px] text-nowrap text-white" data-node-id="17:20">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[18px] text-nowrap text-white" data-node-id="17:20">
               <p className="leading-[normal] whitespace-pre">Overview</p>
             </div>
           </div>
@@ -52,7 +52,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/chart-no-axes-column-increasing" data-node-id="17:22">
               <img alt="" className="block max-w-none size-full" src={imgLucideChartNoAxesColumnIncreasing} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:24">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:24">
               <p className="leading-[normal] whitespace-pre">Performance</p>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/credit-card" data-node-id="22:44">
               <img alt="" className="block max-w-none size-full" src={imgLucideCreditCard} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:28">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:28">
               <p className="leading-[normal] whitespace-pre">Cards</p>
             </div>
           </div>
@@ -72,7 +72,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/baggage-claim" data-node-id="17:30">
               <img alt="" className="block max-w-none size-full" src={imgLucideBaggageClaim} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:32">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:32">
               <p className="leading-[normal] whitespace-pre">Orders</p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/box" data-node-id="17:34">
               <img alt="" className="block max-w-none size-full" src={imgLucideBox} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:36">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:36">
               <p className="leading-[normal] whitespace-pre">Products</p>
             </div>
           </div>
@@ -92,12 +92,12 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/inbox" data-node-id="17:38">
               <img alt="" className="block max-w-none size-full" src={imgLucideInbox} />
             </div>
-            <div className="basis-0 font-['SF_Pro_Display:Medium',_sans-serif] grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#757575] text-[24px]" data-node-id="17:40">
+            <div className="basis-0 font-['Inter',_sans-serif] font-medium grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#757575] text-[18px]" data-node-id="17:40">
               <p className="leading-[normal]">Messages</p>
             </div>
             <div className="flex flex-row items-center self-stretch">
               <div className="bg-[#f24e4e] content-stretch flex flex-col h-full items-center justify-center relative rounded-[4px] shrink-0 w-[30px]" data-name="notification" data-node-id="17:41">
-                <div className="flex flex-col font-['SF_Pro_Display:Medium',_sans-serif] h-[27px] justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-center text-white w-full" data-node-id="17:42">
+                <div className="flex flex-col font-['Inter',_sans-serif] font-medium h-[27px] justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-center text-white w-full" data-node-id="17:42">
                   <p className="leading-[normal]">3</p>
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/sticker" data-node-id="17:46">
               <img alt="" className="block max-w-none size-full" src={imgLucideSticker} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:48">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:48">
               <p className="leading-[normal] whitespace-pre">Feedback</p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/shield-check" data-node-id="17:50">
               <img alt="" className="block max-w-none size-full" src={imgLucideShieldCheck} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:52">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:52">
               <p className="leading-[normal] whitespace-pre">Security</p>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function Sidebar() {
             <div className="relative shrink-0 size-6" data-name="lucide/circle-question-mark" data-node-id="17:54">
               <img alt="" className="block max-w-none size-full" src={imgLucideCircleQuestionMark} />
             </div>
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[24px] text-nowrap" data-node-id="17:56">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[18px] text-nowrap" data-node-id="17:56">
               <p className="leading-[normal] whitespace-pre">Help</p>
             </div>
           </div>
@@ -140,15 +140,15 @@ export default function Sidebar() {
       <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full" data-node-id="17:57">
         <div className="bg-[#553ed5] box-border content-stretch flex flex-col gap-4 items-start justify-start p-4 relative rounded-[16px] shrink-0 w-full" data-name="banner" data-node-id="17:58">
           <div className="content-stretch flex flex-col gap-3 items-start justify-start relative shrink-0 w-full" data-node-id="17:59">
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[16px] text-nowrap text-white" data-node-id="17:60">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[16px] text-nowrap text-white" data-node-id="17:60">
               <p className="leading-[normal] whitespace-pre">Work faster, decide better</p>
             </div>
-            <div className="font-['SF_Pro_Display:Regular',_sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-white" data-node-id="17:61">
+            <div className="font-['Inter',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[14px] text-white" data-node-id="17:61">
               <p>Access detailed reports with our AI Pro Features</p>
             </div>
           </div>
           <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center px-4 py-2 relative rounded-[8px] shrink-0" data-node-id="17:62">
-            <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#553ed5] text-[14px] text-nowrap" data-node-id="17:63">
+            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#553ed5] text-[14px] text-nowrap" data-node-id="17:63">
               <p className="leading-[normal] whitespace-pre">Upgrade now!</p>
             </div>
           </div>

@@ -16,7 +16,7 @@ export default function Header() {
           <div className="relative shrink-0 size-6" data-name="lucide/search" data-node-id="17:64">
             <img alt="" className="block max-w-none size-full" src={imgLucideSearch} />
           </div>
-          <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[20px] text-nowrap" data-node-id="17:66">
+          <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[20px] text-nowrap" data-node-id="17:66">
             <p className="leading-[normal] whitespace-pre">Search</p>
           </div>
         </div>
@@ -24,10 +24,10 @@ export default function Header() {
           <div className="relative shrink-0 size-4" data-name="lucide/command" data-node-id="17:68">
             <img alt="" className="block max-w-none size-full" src={imgLucideCommand} />
           </div>
-          <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:70">
+          <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:70">
             <p className="leading-[normal] whitespace-pre">+</p>
           </div>
-          <div className="font-['SF_Pro_Display:Bold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:71">
+          <div className="font-['Inter',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:71">
             <p className="leading-[normal] whitespace-pre">F</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function Header() {
             <div className="relative shrink-0 size-10" data-node-id="17:86">
               <img alt="" className="block max-w-none size-full rounded-full" src={imgEllipse1} />
             </div>
-            <div className="content-stretch flex flex-col font-['SF_Pro_Display:Medium',_sans-serif] gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
+            <div className="content-stretch flex flex-col font-['Inter',_sans-serif] font-medium gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
               <div className="relative shrink-0 text-black w-full" data-node-id="17:88">
                 <p className="leading-[normal]">John Smith</p>
               </div>

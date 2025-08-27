@@ -23,7 +23,7 @@ export default function DashboardDesktop() {
       <div className="bg-[#faf9ff] p-6 flex flex-col gap-6 overflow-auto" data-name="dashboard-content">
         {/* Dashboard Title */}
         <div className="content-stretch flex gap-[173px] items-center justify-start relative w-full mb-6" data-node-id="17:90">
-          <div className="basis-0 font-['SF_Pro_Display:Medium',_sans-serif] grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#333333] text-[40px]" data-node-id="17:91">
+          <div className="basis-0 font-['Inter',_sans-serif] font-medium grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#333333] text-[40px]" data-node-id="17:91">
             <p className="leading-[normal]">Dashboard</p>
           </div>
           <div className="content-stretch flex gap-3 items-center justify-start relative shrink-0" data-name="buttons-group" data-node-id="17:92">
@@ -32,12 +32,12 @@ export default function DashboardDesktop() {
                 <div className="relative shrink-0 size-4" data-name="lucide/calendar" data-node-id="17:95">
                   <img alt="" className="block max-w-none size-full" src="http://localhost:3845/assets/3c4fc9b343f99e6078ba2877eb57496466d58fbb.svg" />
                 </div>
-                <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:97">
+                <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:97">
                   <p className="leading-[normal] whitespace-pre">Aug 1- Aug 26</p>
                 </div>
               </div>
               <div className="bg-white box-border content-stretch flex gap-1 items-end justify-start px-4 py-3 relative rounded-br-[8px] rounded-tr-[8px] shrink-0 border border-[#d9d8d8]" data-name="button-generic" data-node-id="17:98">
-                <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:99">
+                <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:99">
                   <p className="leading-[normal] whitespace-pre">Monthly</p>
                 </div>
                 <div className="relative shrink-0 size-4" data-name="lucide/chevron-down" data-node-id="17:100">
@@ -50,7 +50,7 @@ export default function DashboardDesktop() {
               <div className="relative shrink-0 size-4" data-name="lucide/list-filter" data-node-id="17:103">
                 <img alt="" className="block max-w-none size-full" src="http://localhost:3845/assets/d2b4d03274b3c6364459974b0c7621bea16e6875.svg" />
               </div>
-              <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:105">
+              <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:105">
                 <p className="leading-[normal] whitespace-pre">Filter</p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export default function DashboardDesktop() {
               <div className="relative shrink-0 size-4" data-name="lucide/download" data-node-id="17:107">
                 <img alt="" className="block max-w-none size-full" src="http://localhost:3845/assets/373fb17d9dbad97c3dbdaa476342d62fb76e2d3e.svg" />
               </div>
-              <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:109">
+              <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#757575] text-[16px] text-nowrap" data-node-id="17:109">
                 <p className="leading-[normal] whitespace-pre">Download</p>
               </div>
             </div>
