@@ -1,16 +1,56 @@
-function App() {
+import './App.css';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import DashboardStats from './components/DashboardStats';
+import YearlyCardActivity from './components/YearlyCardActivity';
+import MyCards from './components/MyCards';
+import RecentTransactions from './components/RecentTransactions';
+
+export default function DashboardDesktop() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 to-purple-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-6xl font-bold text-white mb-4 animate-pulse">
-          ¡Hola! Soy tu dashboard.
-        </h1>
-        <p className="text-xl text-blue-200">
-          Configurado con React y Tailwind CSS
-        </p>
+    <div className="bg-[#faf9ff] relative size-full min-h-screen" data-name="dashboard-desktop" data-node-id="17:3">
+      {/* Sidebar */}
+      <Sidebar />
+      
+      {/* Main Content */}
+      <div className="absolute bg-[#faf9ff] box-border content-stretch flex flex-col gap-6 h-full items-start justify-start left-[319px] p-6 top-0 w-[calc(100%-319px)]" data-name="main-content" data-node-id="17:64">
+        {/* Header */}
+        <Header />
+        
+        {/* Dashboard Title */}
+        <div className="content-stretch flex items-center justify-between relative shrink-0 w-full mb-6">
+          <h1 className="font-['SF_Pro_Display:Bold',_sans-serif] text-[32px] text-[#1b1b1b]">Dashboard</h1>
+          <div className="content-stretch flex gap-4 items-center justify-start relative shrink-0">
+            <div className="bg-white border border-[#d9d8d8] rounded-lg px-3 py-2 text-sm text-[#868686]">
+              Aug 1 - Aug 26
+            </div>
+            <div className="bg-white border border-[#d9d8d8] rounded-lg px-3 py-2 text-sm text-[#868686]">
+              Monthly
+            </div>
+            <div className="bg-white border border-[#d9d8d8] rounded-lg px-3 py-2 text-sm text-[#868686]">
+              Filter
+            </div>
+            <div className="bg-white border border-[#d9d8d8] rounded-lg px-3 py-2 text-sm text-[#868686]">
+              Download
+            </div>
+          </div>
+        </div>
+        
+        {/* Dashboard Stats */}
+        <DashboardStats />
+        
+        {/* Second Row */}
+        <div className="content-stretch flex gap-6 items-start justify-start relative shrink-0 w-full">
+          {/* Yearly Card Activity */}
+          <YearlyCardActivity />
+          
+          {/* My Cards */}
+          <MyCards />
+        </div>
+        
+        {/* Recent Transactions */}
+        <RecentTransactions />
       </div>
     </div>
   );
 }
-
-export default App;
