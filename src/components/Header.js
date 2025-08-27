@@ -7,8 +7,7 @@ const imgEllipse1 = "http://localhost:3845/assets/d19200ab179c368ad99e8577150218
 
 export default function Header() {
   return (
-    <div className="bg-white box-border content-stretch flex items-center justify-start px-6 py-4 relative w-full" data-node-id="17:61">
-      <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
+    <div className="bg-white box-border content-stretch flex items-center justify-start px-6 py-4 relative w-full border-b border-[#d9d8d8]" data-node-id="17:61">
       
       {/* Search Bar */}
       <div className="bg-white box-border content-stretch flex gap-[26px] items-center justify-start px-4 py-3 relative rounded-[8px] shrink-0 w-[441px]" data-name="search-bar" data-node-id="17:62">
