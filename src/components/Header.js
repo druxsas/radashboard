@@ -7,7 +7,7 @@ const imgEllipse1 = "http://localhost:3845/assets/d19200ab179c368ad99e8577150218
 
 export default function Header() {
   return (
-    <div className="bg-white box-border content-stretch flex items-center justify-start px-6 py-8 relative w-full" data-node-id="17:61">
+    <div className="bg-white box-border content-stretch flex items-center justify-start px-6 py-4 relative w-full" data-node-id="17:61">
       <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
       
       {/* Search Bar */}
@@ -58,7 +58,7 @@ export default function Header() {
             <div className="relative shrink-0 size-10" data-node-id="17:86">
               <img alt="" className="block max-w-none size-full rounded-full" src={imgEllipse1} />
             </div>
-            <div className="content-stretch flex flex-col font-['SF_Pro_Display:Medium',_sans-serif] gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] w-[79px]" data-name="user-name" data-node-id="17:87">
+            <div className="content-stretch flex flex-col font-['SF_Pro_Display:Medium',_sans-serif] gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
               <div className="relative shrink-0 text-black w-full" data-node-id="17:88">
                 <p className="leading-[normal]">John Smith</p>
               </div>
