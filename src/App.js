@@ -44,7 +44,7 @@ export default function DashboardDesktop() {
         <DashboardStats />
         
         {/* Second Row */}
-        <div className="content-stretch flex gap-6 items-start justify-start relative shrink-0 w-full">
+        <div className="content-stretch flex gap-6 items-start justify-start relative shrink-0 w-full" style={{gap: '1.5rem'}}>
           {/* Yearly Card Activity */}
           <YearlyCardActivity />
           

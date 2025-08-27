@@ -2,7 +2,7 @@ const imgLucideChevronDown1 = "http://localhost:3845/assets/7dd60b3cef51aa33534e
 
 export default function YearlyCardActivity() {
   return (
-    <div className="bg-white box-border content-stretch flex flex-col gap-6 items-start justify-start p-6 relative rounded-[16px] shrink-0 w-[680px]" data-name="yearly-card-activity" data-node-id="17:113">
+    <div className="bg-white box-border content-stretch flex flex-col gap-6 items-start justify-start p-6 relative rounded-[16px] flex-1 min-w-0" data-name="yearly-card-activity" data-node-id="17:113">
       <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[16px]" />
       
       {/* Header */}
