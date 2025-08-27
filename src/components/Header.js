@@ -7,10 +7,10 @@ const imgEllipse1 = "http://localhost:3845/assets/d19200ab179c368ad99e8577150218
 
 export default function Header() {
   return (
-    <div className="bg-white box-border content-stretch flex items-center justify-start px-0 py-4 relative w-full border-b border-[#d9d8d8] -mx-6" data-node-id="17:61">
+    <div className="bg-white box-border content-stretch flex items-center justify-start px-6 py-4 relative w-full border-b border-[#d9d8d8]" data-node-id="17:61">
       
       {/* Search Bar */}
-      <div className="bg-white box-border content-stretch flex gap-[26px] items-center justify-start px-4 py-3 relative rounded-[8px] shrink-0 w-[441px] ml-6" data-name="search-bar" data-node-id="17:62">
+      <div className="bg-white box-border content-stretch flex gap-[26px] items-center justify-start px-4 py-3 relative rounded-[8px] shrink-0 w-[441px]" data-name="search-bar" data-node-id="17:62">
         <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[8px]" />
         <div className="basis-0 content-stretch flex gap-2 grow items-center justify-start min-h-px min-w-px relative shrink-0" data-name="icon+copy" data-node-id="17:63">
           <div className="relative shrink-0 size-6" data-name="lucide/search" data-node-id="17:64">
@@ -34,7 +34,7 @@ export default function Header() {
       </div>
       
       {/* Right Side */}
-      <div className="basis-0 content-stretch flex gap-6 grow items-center justify-end min-h-px min-w-px relative shrink-0 mr-6" data-node-id="17:72">
+      <div className="basis-0 content-stretch flex gap-6 grow items-center justify-end min-h-px min-w-px relative shrink-0" data-node-id="17:72">
         {/* Icons Group */}
         <div className="h-10 relative shrink-0 w-28 flex items-center justify-center gap-6" data-name="icons-group" data-node-id="17:73">
           <div className="relative shrink-0 size-8" data-name="lucide/share-2" data-node-id="17:74">
