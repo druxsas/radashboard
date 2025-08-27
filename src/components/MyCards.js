@@ -6,7 +6,7 @@ const imgVisaLogo = "http://localhost:3845/assets/218e7f866bfc4aad0aeb73931bf235
 
 export default function MyCards() {
   return (
-    <div className="bg-white box-border content-stretch flex flex-col gap-6 items-start justify-start p-6 relative rounded-[16px] flex-1 min-w-0" data-name="my-cards" data-node-id="17:124">
+    <div className="bg-white box-border content-stretch flex flex-col gap-6 items-start justify-start p-6 relative rounded-[16px] h-full" style={{flexBasis: '30%'}} data-name="my-cards" data-node-id="17:124">
       <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[16px]" />
       
       {/* Header */}
