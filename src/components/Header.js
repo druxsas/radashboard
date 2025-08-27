@@ -1,6 +1,7 @@
 const imgLucideSearch = "http://localhost:3845/assets/adf36b926cc84090deff5c290eee9ff1166bd461.svg";
 const imgLucideCommand = "http://localhost:3845/assets/bc60a69c56ab2e27fd8c52f057e351b217da817a.svg";
-const imgIconsGroup = "http://localhost:3845/assets/f672a3dee0c4390562e3d2aba26a8f005aad69d2.svg";
+const imgLucideShare2 = "http://localhost:3845/assets/807da57139472d57e4cfa50d38fa4f9d1d062dea.svg";
+const imgLucideCirclePlus = "http://localhost:3845/assets/64d3e84ef1f464ad5b89ef15195d23a82f3a0bdd.svg";
 const imgLucideBell = "http://localhost:3845/assets/54ddbdc329024718c40ca278e14533bad1cc248a.svg";
 const imgLucideCalendar = "http://localhost:3845/assets/3c4fc9b343f99e6078ba2877eb57496466d58fbb.svg";
 const imgLucideChevronDown = "http://localhost:3845/assets/984f82070703438f39d9e0d403989bb7e372346d.svg";
@@ -30,10 +31,15 @@ export default function Header() {
       
       {/* Right Side */}
       <div className="content-stretch flex gap-4 items-center justify-start relative shrink-0" data-node-id="17:74">
-        {/* Icons */}
-        <div className="content-stretch flex gap-3 items-center justify-start relative shrink-0" data-node-id="17:75">
-          <div className="relative shrink-0 size-5" data-name="icons-group" data-node-id="17:76">
-            <img alt="" className="block max-w-none size-full" src={imgIconsGroup} />
+        {/* Icons Group */}
+        <div className="content-stretch flex gap-6 items-center justify-start relative shrink-0">
+          <div className="relative h-10 w-28 flex items-center gap-6" data-name="icons-group" data-node-id="17:73">
+            <div className="relative h-8 w-8" data-name="lucide/share-2" data-node-id="17:74">
+              <img alt="" className="block max-w-none size-full" src={imgLucideShare2} />
+            </div>
+            <div className="relative h-8 w-8" data-name="lucide/circle-plus" data-node-id="17:78">
+              <img alt="" className="block max-w-none size-full" src={imgLucideCirclePlus} />
+            </div>
           </div>
           <div className="relative shrink-0 size-6" data-name="lucide/bell" data-node-id="17:77">
             <img alt="" className="block max-w-none size-full" src={imgLucideBell} />
