@@ -4,7 +4,7 @@ export default function DashboardStats() {
   return (
     <div className="content-stretch flex gap-6 items-start justify-start relative shrink-0 w-full mb-6">
       {/* Total Spent */}
-      <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] shrink-0 w-[400px]" data-name="total-spent" data-node-id="17:86">
+      <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] flex-1 min-w-0" data-name="total-spent" data-node-id="17:86">
         <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[16px]" />
         <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="17:87">
           <div className="font-['SF_Pro_Display:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#1b1b1b] text-[20px] text-nowrap" data-node-id="17:88">
@@ -30,7 +30,7 @@ export default function DashboardStats() {
       </div>
 
       {/* Available Credit */}
-      <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] shrink-0 w-[400px]" data-name="available-credit" data-node-id="17:95">
+      <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] flex-1 min-w-0" data-name="available-credit" data-node-id="17:95">
         <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[16px]" />
         <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="17:96">
           <div className="font-['SF_Pro_Display:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#1b1b1b] text-[20px] text-nowrap" data-node-id="17:97">
@@ -56,7 +56,7 @@ export default function DashboardStats() {
       </div>
 
       {/* Outstanding Balance */}
-      <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] shrink-0 w-[400px]" data-name="outstanding-balance" data-node-id="17:104">
+      <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] flex-1 min-w-0" data-name="outstanding-balance" data-node-id="17:104">
         <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[16px]" />
         <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-node-id="17:105">
           <div className="font-['SF_Pro_Display:SemiBold',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#1b1b1b] text-[20px] text-nowrap" data-node-id="17:106">
