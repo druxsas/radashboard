@@ -18,8 +18,8 @@
     "d3-format": "^3.1.0",
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "vercel": "^46.0.5",
     "web-vitals": "^2.1.4"
   },
@@ -28,40 +28,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-  },
-  "overrides": {
-    "@visx/axis": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/shape": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/scale": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/grid": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/responsive": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/tooltip": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/event": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    },
-    "@visx/group": {
-      "react": "$react",
-      "react-dom": "$react-dom"
-    }
   },
   "eslintConfig": {
     "extends": [
@@ -83,6 +49,7 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
+    "ajv": "^8.17.1",
     "react-scripts": "^5.0.1"
   }
 }
