@@ -179,21 +179,32 @@ export default function Sidebar() {
       
       {/* Promotional Banner */}
       <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full" data-node-id="17:57">
-        <div className="bg-[#553ed5] box-border content-stretch flex flex-col gap-4 items-start justify-start p-4 relative rounded-[16px] shrink-0 w-full" data-name="banner" data-node-id="17:58">
-          <div className="content-stretch flex flex-col gap-3 items-start justify-start relative shrink-0 w-full" data-node-id="17:59">
-            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[16px] text-nowrap text-white" data-node-id="17:60">
-              <p className="leading-[normal] whitespace-pre">Work faster, decide better</p>
+        <div className="bg-[#553ed5] box-border relative rounded-[16px] shrink-0 w-full overflow-hidden" data-name="banner" data-node-id="17:58">
+          {/* Banner Content Container with 24px padding */}
+          <div className="p-6 flex flex-col gap-0">
+            {/* Banner Image */}
+            <div className="w-full flex justify-start">
+              <div className="bg-center bg-no-repeat h-[100px] opacity-80 w-[100px]" data-name="banner-image" data-node-id="17:60" style={{ backgroundImage: `url('/images/banner-image.png')`, backgroundSize: 'contain' }} />
             </div>
-            <div className="font-['Inter',_sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[14px] text-white" data-node-id="17:61">
-              <p>Access detailed reports with our AI Pro Features</p>
+            
+            {/* Banner Text */}
+            <div className="content-stretch flex flex-col gap-3 items-start justify-start relative shrink-0 w-full" data-node-id="17:59">
+              <div className="font-['SF_Pro_Display',_sans-serif] font-medium leading-normal not-italic relative shrink-0 text-[16px] text-nowrap text-white" data-node-id="17:60" style={{ textShadow: '2px 2px 25px #140234' }}>
+                <p className="leading-[normal] whitespace-pre">Work faster, decide better</p>
+              </div>
+              <div className="font-['SF_Pro_Display',_sans-serif] font-medium leading-normal not-italic relative shrink-0 text-[16px] text-white" data-node-id="17:61" style={{ textShadow: '2px 2px 25px #140234' }}>
+                <p>Access detailed reports with our <span className="font-['SF_Pro_Display',_sans-serif] font-bold text-[20px] leading-normal">AI Pro Features</span></p>
+              </div>
             </div>
-          </div>
-          <div className="bg-gradient-to-b box-border content-stretch flex from-[#ffffff] gap-2.5 items-center justify-center px-6 py-3 relative rounded-[8px] shrink-0 to-[#ddd7ff] w-full cursor-pointer transition-transform duration-300 ease-out hover:scale-105" data-node-id="17:62">
-            <div aria-hidden="true" className="absolute border border-solid border-white inset-0 pointer-events-none rounded-[8px] shadow-[0px_10px_29px_0px_rgba(108,83,248,0.8),0px_5px_3px_0px_rgba(0,0,0,0.21)]" />
-            <div className="bg-clip-text bg-gradient-to-b font-['SF_Pro_Display:Bold',_sans-serif] from-[#6c53f8] leading-[0] not-italic relative shrink-0 text-[16px] text-nowrap to-[#3f3192]" data-node-id="17:63" style={{ WebkitTextFillColor: "transparent" }}>
-              <p className="leading-[normal] whitespace-pre">Upgrade now!</p>
+            
+            {/* Banner Button */}
+            <div className="bg-gradient-to-b box-border content-stretch flex from-[#ffffff] gap-2.5 items-center justify-center px-6 py-3 relative rounded-[8px] shrink-0 to-[#ddd7ff] w-full cursor-pointer transition-transform duration-300 ease-out hover:scale-105 mt-4" data-node-id="17:62">
+              <div aria-hidden="true" className="absolute border border-solid border-white inset-0 pointer-events-none rounded-[8px] shadow-[0px_10px_29px_0px_rgba(108,83,248,0.8),0px_5px_3px_0px_rgba(0,0,0,0.21)]" />
+              <div className="bg-clip-text bg-gradient-to-b font-['SF_Pro_Display',_sans-serif] font-bold from-[#6c53f8] leading-normal not-italic relative shrink-0 text-[16px] text-nowrap to-[#3f3192]" data-node-id="17:63" style={{ WebkitTextFillColor: "transparent" }}>
+                <p className="leading-[normal] whitespace-pre">Upgrade now!</p>
+              </div>
+              <div className="absolute inset-0 pointer-events-none shadow-[0px_-3px_12px_0px_inset_rgba(108,83,248,0.2)]" />
             </div>
-            <div className="absolute inset-0 pointer-events-none shadow-[0px_-3px_12px_0px_inset_rgba(108,83,248,0.2)]" />
           </div>
         </div>
       </div>
