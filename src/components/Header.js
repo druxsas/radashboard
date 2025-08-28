@@ -28,8 +28,8 @@ export default function Header() {
       "-=0.4"
     )
     .fromTo(iconsRef.current,
-      { x: 30, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+      { y: -30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
       "-=0.4"
     )
     .fromTo(userRef.current,
@@ -55,10 +55,10 @@ export default function Header() {
     if (icons) {
       icons.forEach(icon => {
         icon.addEventListener('mouseenter', () => {
-          gsap.to(icon, { scale: 1.1, rotation: 5, duration: 0.3, ease: "power2.out" });
+          gsap.to(icon, { scale: 1.1, duration: 0.3, ease: "power2.out" });
         });
         icon.addEventListener('mouseleave', () => {
-          gsap.to(icon, { scale: 1, rotation: 0, duration: 0.3, ease: "power2.out" });
+          gsap.to(icon, { scale: 1, duration: 0.3, ease: "power2.out" });
         });
       });
     }
