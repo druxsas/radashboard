@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Bar } from '@visx/shape';
 import { Group } from '@visx/group';
 import { scaleBand, scaleLinear } from '@visx/scale';
-import { AxisBottom, AxisLeft } from '@visx/axis';
+import { AxisLeft } from '@visx/axis';
 import { GridRows } from '@visx/grid';
 import { ParentSize } from '@visx/responsive';
 import { useTooltip, useTooltipInPortal, defaultStyles } from '@visx/tooltip';

@@ -20,7 +20,6 @@
     "gsap": "^3.13.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-scripts": "5.0.1",
     "vercel": "^46.0.5",
     "web-vitals": "^2.1.4"
   },
@@ -29,6 +28,32 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "overrides": {
+    "@visx/axis": {
+      "react": "$react"
+    },
+    "@visx/shape": {
+      "react": "$react"
+    },
+    "@visx/scale": {
+      "react": "$react"
+    },
+    "@visx/grid": {
+      "react": "$react"
+    },
+    "@visx/responsive": {
+      "react": "$react"
+    },
+    "@visx/tooltip": {
+      "react": "$react"
+    },
+    "@visx/event": {
+      "react": "$react"
+    },
+    "@visx/group": {
+      "react": "$react"
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -47,5 +72,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^7.1.0",
+    "react-scripts": "^5.0.1"
   }
 }
