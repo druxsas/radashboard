@@ -1,8 +1,41 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+
 const imgLucideEllipsisVertical = "http://localhost:3845/assets/905d1bc157e09f8ee10ae10c4dbd13497ffc1617.svg";
 
 export default function DashboardStats() {
+  const statsRef = useRef(null);
+
+  useEffect(() => {
+    // Hover animations for stats cards
+    const cards = statsRef.current?.querySelectorAll('[data-name*="card"]');
+    if (cards) {
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          gsap.to(card, { 
+            y: -8, 
+            scale: 1.02,
+            boxShadow: '0 10px 25px rgba(0,0,0,0.15)',
+            duration: 0.3, 
+            ease: "power2.out" 
+          });
+        });
+        card.addEventListener('mouseleave', () => {
+          gsap.to(card, { 
+            y: 0, 
+            scale: 1,
+            boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+            duration: 0.3, 
+            ease: "power2.out" 
+          });
+        });
+      });
+    }
+
+  }, []);
+
   return (
-    <div className="content-stretch flex gap-6 items-start justify-start relative shrink-0 w-full mb-6">
+    <div ref={statsRef} className="content-stretch flex gap-6 items-start justify-start relative shrink-0 w-full mb-6">
       {/* Total Spent */}
       <div className="bg-white box-border content-stretch flex flex-col gap-4 items-start justify-start p-6 relative rounded-[16px] flex-1 min-w-0" data-name="total-spent" data-node-id="17:86">
         <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[16px]" />

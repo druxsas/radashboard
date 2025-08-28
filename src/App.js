@@ -1,4 +1,6 @@
 import './App.css';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import DashboardStats from './components/DashboardStats';
@@ -7,10 +9,69 @@ import MyCards from './components/MyCards';
 import RecentTransactions from './components/RecentTransactions';
 
 export default function DashboardDesktop() {
+  const sidebarRef = useRef(null);
+  const titleRef = useRef(null);
+  const statsRef = useRef(null);
+  const cardsRef = useRef(null);
+  const transactionsRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    
+    // Main dashboard entrance animation
+    tl.fromTo(sidebarRef.current,
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+    )
+    .fromTo(titleRef.current,
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+      "-=0.4"
+    )
+    .fromTo(statsRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+      "-=0.3"
+    )
+    .fromTo(cardsRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+      "-=0.5"
+    )
+    .fromTo(transactionsRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+      "-=0.5"
+    );
+
+    // Stagger animation for stats cards
+    const statsCards = statsRef.current?.querySelectorAll('[data-name*="card"]');
+    if (statsCards) {
+      gsap.fromTo(statsCards,
+        { scale: 0.9, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5, stagger: 0.1, ease: "back.out(1.7)", delay: 1 }
+      );
+    }
+
+    // Hover animations for dashboard title buttons
+    const titleButtons = titleRef.current?.querySelectorAll('[data-name="button-generic"]');
+    if (titleButtons) {
+      titleButtons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+          gsap.to(button, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+        });
+        button.addEventListener('mouseleave', () => {
+          gsap.to(button, { scale: 1, duration: 0.3, ease: "power2.out" });
+        });
+      });
+    }
+
+  }, []);
+
   return (
     <div className="bg-[#faf9ff] min-h-screen grid grid-cols-[319px_1fr] grid-rows-[auto_1fr]" data-name="dashboard-desktop" data-node-id="17:3">
       {/* Sidebar - spans both rows */}
-      <div className="row-span-2">
+      <div ref={sidebarRef} className="row-span-2">
         <Sidebar />
       </div>
       
@@ -22,7 +83,7 @@ export default function DashboardDesktop() {
       {/* Dashboard Content - bottom right */}
       <div className="bg-[#faf9ff] p-6 flex flex-col gap-6 overflow-auto" data-name="dashboard-content">
         {/* Dashboard Title */}
-        <div className="content-stretch flex gap-[173px] items-center justify-start relative w-full mb-6" data-node-id="17:90">
+        <div ref={titleRef} className="content-stretch flex gap-[173px] items-center justify-start relative w-full mb-6" data-node-id="17:90">
           <div className="basis-0 font-['Inter',_sans-serif] font-medium grow leading-[0] min-h-px min-w-px not-italic relative shrink-0 text-[#333333] text-[40px]" data-node-id="17:91">
             <p className="leading-[normal]">Dashboard</p>
           </div>
@@ -67,19 +128,22 @@ export default function DashboardDesktop() {
         </div>
         
         {/* Dashboard Stats */}
-        <DashboardStats />
+        <div ref={statsRef}>
+          <DashboardStats />
+        </div>
         
         {/* Second Row */}
-        <div className="content-stretch flex items-stretch justify-start relative shrink-0 w-full" style={{gap: '1.5rem'}}>
+        <div ref={cardsRef} className="content-stretch flex items-stretch justify-start relative shrink-0 w-full" style={{gap: '1.5rem'}}>
           {/* Yearly Card Activity */}
-          <YearlyCardActivity />
-          
+          <YearlyCardActivity style={{flexBasis: '70%', height: '100%'}} />
           {/* My Cards */}
-          <MyCards />
+          <MyCards style={{flexBasis: '30%', height: '100%'}} />
         </div>
         
         {/* Recent Transactions */}
-        <RecentTransactions />
+        <div ref={transactionsRef}>
+          <RecentTransactions />
+        </div>
       </div>
     </div>
   );

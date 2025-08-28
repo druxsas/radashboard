@@ -1,3 +1,6 @@
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+
 const imgGroup15 = "http://localhost:3845/assets/dabdf34137765ea1f3d9e51098affa943f8d7310.svg";
 const imgLucideArrowLeftToLine = "http://localhost:3845/assets/7f94a3dcea23c7d4e55863413364e3a33be414d0.svg";
 const imgLucideLayoutDashboard = "http://localhost:3845/assets/24773fe68671c2f5603b46182feba0b1f6879ff3.svg";
@@ -11,8 +14,47 @@ const imgLucideShieldCheck = "http://localhost:3845/assets/461f3f211d86538679994
 const imgLucideCircleQuestionMark = "http://localhost:3845/assets/554d67a73fee633c00f28494600ef57e4d7e82c5.svg";
 
 export default function Sidebar() {
+  const sidebarRef = useRef(null);
+
+  useEffect(() => {
+    // Hover animations for menu items
+    const menuItems = sidebarRef.current?.querySelectorAll('[data-name*="menu-item"]');
+    if (menuItems) {
+      menuItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          gsap.to(item, { 
+            x: 8, 
+            backgroundColor: 'rgba(112, 97, 198, 0.1)', 
+            duration: 0.3, 
+            ease: "power2.out" 
+          });
+        });
+        item.addEventListener('mouseleave', () => {
+          gsap.to(item, { 
+            x: 0, 
+            backgroundColor: 'transparent', 
+            duration: 0.3, 
+            ease: "power2.out" 
+          });
+        });
+      });
+    }
+
+    // Hover animation for logo
+    const logo = sidebarRef.current?.querySelector('[data-name="logo"]');
+    if (logo) {
+      logo.addEventListener('mouseenter', () => {
+        gsap.to(logo, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+      });
+      logo.addEventListener('mouseleave', () => {
+        gsap.to(logo, { scale: 1, duration: 0.3, ease: "power2.out" });
+      });
+    }
+
+  }, []);
+
   return (
-    <div className="absolute bg-white box-border content-stretch flex flex-col gap-4 h-[1283px] items-start justify-start left-0 p-[24px] top-0 w-[319px]" data-name="menu-open" data-node-id="17:4">
+    <div ref={sidebarRef} className="absolute bg-white box-border content-stretch flex flex-col gap-4 h-[1283px] items-start justify-start left-0 p-[24px] top-0 w-[319px]" data-name="menu-open" data-node-id="17:4">
       <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_1px_0px_0px] border-solid inset-0 pointer-events-none" />
       
       {/* Logo Section */}

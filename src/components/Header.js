@@ -1,3 +1,6 @@
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+
 const imgLucideSearch = "http://localhost:3845/assets/adf36b926cc84090deff5c290eee9ff1166bd461.svg";
 const imgLucideCommand = "http://localhost:3845/assets/bc60a69c56ab2e27fd8c52f057e351b217da817a.svg";
 const imgLucideShare2 = "http://localhost:3845/assets/807da57139472d57e4cfa50d38fa4f9d1d062dea.svg";
@@ -6,11 +9,76 @@ const imgLucideBell = "http://localhost:3845/assets/54ddbdc329024718c40ca278e145
 const imgEllipse1 = "http://localhost:3845/assets/d19200ab179c368ad99e8577150218a83575b285.png";
 
 export default function Header() {
+  const headerRef = useRef(null);
+  const searchRef = useRef(null);
+  const iconsRef = useRef(null);
+  const userRef = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    
+    // Header entrance animation
+    tl.fromTo(headerRef.current, 
+      { y: -50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+    )
+    .fromTo(searchRef.current,
+      { x: -30, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+      "-=0.4"
+    )
+    .fromTo(iconsRef.current,
+      { x: 30, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
+      "-=0.4"
+    )
+    .fromTo(userRef.current,
+      { scale: 0.8, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" },
+      "-=0.3"
+    );
+
+    // Hover animations for interactive elements
+    const searchBar = searchRef.current;
+    const icons = iconsRef.current?.querySelectorAll('[data-name*="lucide"]');
+    const userSection = userRef.current;
+
+    if (searchBar) {
+      searchBar.addEventListener('mouseenter', () => {
+        gsap.to(searchBar, { scale: 1.02, duration: 0.3, ease: "power2.out" });
+      });
+      searchBar.addEventListener('mouseleave', () => {
+        gsap.to(searchBar, { scale: 1, duration: 0.3, ease: "power2.out" });
+      });
+    }
+
+    if (icons) {
+      icons.forEach(icon => {
+        icon.addEventListener('mouseenter', () => {
+          gsap.to(icon, { scale: 1.1, rotation: 5, duration: 0.3, ease: "power2.out" });
+        });
+        icon.addEventListener('mouseleave', () => {
+          gsap.to(icon, { scale: 1, rotation: 0, duration: 0.3, ease: "power2.out" });
+        });
+      });
+    }
+
+    if (userSection) {
+      userSection.addEventListener('mouseenter', () => {
+        gsap.to(userSection, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+      });
+      userSection.addEventListener('mouseleave', () => {
+        gsap.to(userSection, { scale: 1, duration: 0.3, ease: "power2.out" });
+      });
+    }
+
+  }, []);
+
   return (
-    <div className="bg-white box-border content-stretch flex items-center justify-start px-6 py-4 relative w-full border-b border-[#d9d8d8]" data-node-id="17:61">
+    <div ref={headerRef} className="bg-white box-border content-stretch flex items-center justify-start px-6 py-4 relative w-full border-b border-[#d9d8d8]" data-node-id="17:61">
       
       {/* Search Bar */}
-      <div className="bg-white box-border content-stretch flex gap-[26px] items-center justify-start px-4 py-3 relative rounded-[8px] shrink-0 w-[441px]" data-name="search-bar" data-node-id="17:62">
+      <div ref={searchRef} className="bg-white box-border content-stretch flex gap-[26px] items-center justify-start px-4 py-3 relative rounded-[8px] shrink-0 w-[441px]" data-name="search-bar" data-node-id="17:62">
         <div aria-hidden="true" className="absolute border border-[#d9d8d8] border-solid inset-0 pointer-events-none rounded-[8px]" />
         <div className="basis-0 content-stretch flex gap-2 grow items-center justify-start min-h-px min-w-px relative shrink-0" data-name="icon+copy" data-node-id="17:63">
           <div className="relative shrink-0 size-6" data-name="lucide/search" data-node-id="17:64">
@@ -36,7 +104,7 @@ export default function Header() {
       {/* Right Side */}
       <div className="basis-0 content-stretch flex gap-6 grow items-center justify-end min-h-px min-w-px relative shrink-0" data-node-id="17:72">
         {/* Icons Group */}
-        <div className="h-10 relative shrink-0 w-28 flex items-center justify-center gap-6" data-name="icons-group" data-node-id="17:73">
+        <div ref={iconsRef} className="h-10 relative shrink-0 w-28 flex items-center justify-center gap-6" data-name="icons-group" data-node-id="17:73">
           <div className="relative shrink-0 size-8" data-name="lucide/share-2" data-node-id="17:74">
             <img alt="" className="block max-w-none size-full" src={imgLucideShare2} />
           </div>
@@ -49,7 +117,7 @@ export default function Header() {
         <div className="h-10 w-px bg-[#d9d8d8]"></div>
         
         {/* User Section */}
-        <div className="content-stretch flex gap-4 items-center justify-start relative shrink-0" data-name="user" data-node-id="17:81">
+        <div ref={userRef} className="content-stretch flex gap-4 items-center justify-start relative shrink-0" data-name="user" data-node-id="17:81">
           <div className="relative shrink-0 size-8" data-name="lucide/bell" data-node-id="17:82">
             <img alt="" className="block max-w-none size-full" src={imgLucideBell} />
           </div>
