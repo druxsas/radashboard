@@ -54,7 +54,7 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <div ref={sidebarRef} className="absolute bg-white box-border content-stretch flex flex-col gap-4 h-[1283px] items-start justify-start left-0 p-[24px] top-0 w-[319px]" data-name="menu-open" data-node-id="17:4">
+    <div ref={sidebarRef} className="absolute bg-white box-border content-stretch flex flex-col gap-4 h-full items-start justify-start left-0 p-[24px] top-0 w-[319px]" data-name="menu-open" data-node-id="17:4">
       <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_1px_0px_0px] border-solid inset-0 pointer-events-none" />
       
       {/* Logo Section */}
