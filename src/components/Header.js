@@ -121,8 +121,8 @@ export default function Header() {
           <div className="relative shrink-0 size-8" data-name="lucide/bell" data-node-id="17:82">
             <img alt="" className="block max-w-none size-full" src={imgLucideBell} />
           </div>
-          <div className="content-stretch flex gap-3 items-center justify-start relative shrink-0" data-name="user" data-node-id="17:85">
-            <div className="relative shrink-0 size-10" data-node-id="17:86">
+          <div className="content-stretch flex gap-2 items-center justify-start relative shrink-0" data-name="user" data-node-id="17:85">
+            <div className="relative shrink-0 w-16 h-16" data-node-id="17:86">
               <img alt="" className="block max-w-none size-full rounded-full" src={imgEllipse1} />
             </div>
             <div className="content-stretch flex flex-col font-['Inter',_sans-serif] font-medium gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
