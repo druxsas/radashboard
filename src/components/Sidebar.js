@@ -58,8 +58,7 @@ export default function Sidebar() {
       <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_1px_0px_0px] border-solid inset-0 pointer-events-none" />
       
       {/* Logo Section */}
-      <div className="box-border content-stretch flex items-center justify-start pb-[27px] pt-[26px] px-0 relative shrink-0 w-full" data-node-id="17:5">
-        <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
+      <div className="box-border content-stretch flex items-center justify-start pb-[27px] pt-[26px] px-0 relative shrink-0 w-full border-b border-[#d9d8d8]" data-node-id="17:5">
         <div className="basis-0 content-stretch flex gap-2 grow items-center justify-start min-h-px min-w-px relative shrink-0" data-name="logo" data-node-id="17:6">
           <div className="h-[32.432px] relative shrink-0 w-[47.688px]" data-node-id="23:365">
             <img alt="" className="block max-w-none size-full" src={imgGroup15} />
