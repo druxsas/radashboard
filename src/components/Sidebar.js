@@ -139,7 +139,7 @@ export default function Sidebar() {
             <div className="flex flex-row items-center self-stretch">
               <div className="bg-[#f24e4e] content-stretch flex flex-col h-full items-center justify-center relative rounded-[4px] shrink-0 w-[30px]" data-name="notification" data-node-id="17:41">
                 <div className="flex flex-col font-['Inter',_sans-serif] font-medium h-[27px] justify-center leading-[0] not-italic relative shrink-0 text-[18px] text-center text-white w-full" data-node-id="17:42">
-                  <p className="leading-[normal]">3</p>
+                  <p className="leading-[normal]">2</p>
                 </div>
               </div>
             </div>
