@@ -1,8 +1,7 @@
-const imgLucideChevronDown1 = "http://localhost:3845/assets/7dd60b3cef51aa33534ef2be6d84562fab2ef8a5.svg";
-const imgCreditCardBg = "http://localhost:3845/assets/a504533f611adc6797582edbd0433e8e5aacd716.svg";
-const imgChip = "http://localhost:3845/assets/95f661784746379c9eb66a8cacebd0b450dfeb3c.svg";
-const imgContactless = "http://localhost:3845/assets/972d90c10f4a52d7895c2b056caeaf8371007909.svg";
-const imgVisaLogo = "http://localhost:3845/assets/218e7f866bfc4aad0aeb73931bf23561e2e9f87b.svg";
+// Import local assets
+const imgLucideChevronDown1 = "/images/chevron-down.svg";
+const imgCard1 = "/images/card-1.png";
+const imgCard2 = "/images/card-2.png";
 
 export default function MyCards() {
   return (
@@ -24,37 +23,30 @@ export default function MyCards() {
         </div>
       </div>
       
-      {/* Credit Card */}
+      {/* Credit Cards Stack */}
       <div className="content-stretch flex flex-col gap-6 items-start justify-start relative shrink-0 w-full" data-node-id="17:130">
-        <div className="h-[144px] relative shrink-0 w-full" data-name="credit-card" data-node-id="17:131">
-          <img alt="" className="block max-w-none size-full rounded-xl" src={imgCreditCardBg} />
+        <div className="relative w-full flex-1 min-h-[160px] overflow-visible">
+          {/* Card 2 (Background) */}
+          <img 
+            alt="Credit Card 2" 
+            className="absolute top-3 left-3 w-[calc(100%-12px)] rounded-xl object-cover shadow-lg" 
+            src={imgCard2}
+            style={{ zIndex: 1, height: 'auto', aspectRatio: '320/180' }}
+          />
           
-          {/* Card Details Overlay */}
-          <div className="absolute inset-0 p-4 text-white flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <img alt="" className="w-8 h-6" src={imgChip} />
-              <img alt="" className="w-6 h-6" src={imgContactless} />
-            </div>
-            <div>
-              <div className="text-lg font-mono tracking-wider mb-2">4213 •••• •••• 5578</div>
-              <div className="flex justify-between items-end">
-                <div>
-                  <div className="text-xs opacity-75">••/••</div>
-                  <div className="text-sm font-medium">John Smith</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-xs opacity-75">CVV •••</div>
-                  <img alt="" className="h-6" src={imgVisaLogo} />
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Card 1 (Foreground) */}
+          <img 
+            alt="Credit Card 1" 
+            className="absolute top-0 left-0 w-[calc(100%-12px)] rounded-xl object-cover shadow-lg" 
+            src={imgCard1}
+            style={{ zIndex: 2, height: 'auto', aspectRatio: '320/180' }}
+          />
         </div>
         
         {/* Manage Cards Link */}
         <div className="content-stretch flex gap-2.5 items-end justify-start relative shrink-0 w-full" data-node-id="17:132">
-          <div className="font-['SF_Pro_Display:Medium',_sans-serif] leading-[0] not-italic relative shrink-0 text-[#553ed5] text-[16px] text-nowrap" data-node-id="17:133">
-            <p className="leading-[normal] whitespace-pre">Manage cards</p>
+          <div className="font-['SF_Pro_Display',_sans-serif] font-medium leading-normal text-[#553ed5] text-[16px] cursor-pointer hover:underline" data-node-id="17:133">
+            Manage cards
           </div>
         </div>
       </div>
