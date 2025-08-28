@@ -188,10 +188,12 @@ export default function Sidebar() {
               <p>Access detailed reports with our AI Pro Features</p>
             </div>
           </div>
-          <div className="bg-white box-border content-stretch flex gap-2.5 items-center justify-center px-4 py-2 relative rounded-[8px] shrink-0" data-node-id="17:62">
-            <div className="font-['Inter',_sans-serif] font-medium leading-[0] not-italic relative shrink-0 text-[#553ed5] text-[14px] text-nowrap" data-node-id="17:63">
+          <div className="bg-gradient-to-b box-border content-stretch flex from-[#ffffff] gap-2.5 items-center justify-center px-6 py-3 relative rounded-[8px] shrink-0 to-[#ddd7ff] w-full" data-node-id="17:62">
+            <div aria-hidden="true" className="absolute border border-solid border-white inset-0 pointer-events-none rounded-[8px] shadow-[0px_10px_29px_0px_rgba(108,83,248,0.8),0px_5px_3px_0px_rgba(0,0,0,0.21)]" />
+            <div className="bg-clip-text bg-gradient-to-b font-['SF_Pro_Display:Bold',_sans-serif] from-[#6c53f8] leading-[0] not-italic relative shrink-0 text-[16px] text-nowrap to-[#3f3192]" data-node-id="17:63" style={{ WebkitTextFillColor: "transparent" }}>
               <p className="leading-[normal] whitespace-pre">Upgrade now!</p>
             </div>
+            <div className="absolute inset-0 pointer-events-none shadow-[0px_-3px_12px_0px_inset_rgba(108,83,248,0.2)]" />
           </div>
         </div>
       </div>
