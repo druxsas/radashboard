@@ -11,36 +11,54 @@ const imgEllipse1 = "http://localhost:3845/assets/d19200ab179c368ad99e8577150218
 export default function Header() {
   const headerRef = useRef(null);
   const searchRef = useRef(null);
-  const iconsRef = useRef(null);
-  const userRef = useRef(null);
+  const iconsGroupRef = useRef(null);
+  const bellIconRef = useRef(null);
+  const userAvatarRef = useRef(null);
+  const userNameRef = useRef(null);
+  const userRoleRef = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline();
-    
     // Header entrance animation
-    tl.fromTo(headerRef.current, 
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
-    )
-    .fromTo(searchRef.current,
-      { x: -30, opacity: 0 },
-      { x: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
-      "-=0.4"
-    )
-    .fromTo(iconsRef.current,
+    if (headerRef.current) {
+      gsap.fromTo(headerRef.current, 
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" }
+      );
+    }
+
+    // Icons group staggered entrance animation
+    if (iconsGroupRef.current) {
+      const icons = iconsGroupRef.current.children;
+      gsap.fromTo(icons, 
+        { y: -30, opacity: 0 },
+        { 
+          y: 0, 
+          opacity: 1, 
+          duration: 0.5, 
+          delay: 0.2,
+          stagger: 0.1,
+          ease: "power2.out" 
+        }
+      );
+    }
+
+    // User section staggered entrance animation
+    const userElements = [bellIconRef.current, userAvatarRef.current, userNameRef.current, userRoleRef.current];
+    gsap.fromTo(userElements.filter(Boolean), 
       { y: -30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" },
-      "-=0.4"
-    )
-    .fromTo(userRef.current,
-      { scale: 0.8, opacity: 0 },
-      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" },
-      "-=0.3"
+      { 
+        y: 0, 
+        opacity: 1, 
+        duration: 0.5, 
+        delay: 0.4,
+        stagger: 0.1,
+        ease: "power2.out" 
+      }
     );
 
     // Hover animations for interactive elements
     const searchBar = searchRef.current;
-    const icons = iconsRef.current?.querySelectorAll('[data-name*="lucide"]');
+    const icons = iconsGroupRef.current?.querySelectorAll('[data-name*="lucide"]');
 
     if (searchBar) {
       searchBar.addEventListener('mouseenter', () => {
@@ -129,7 +147,7 @@ export default function Header() {
       {/* Right Side */}
       <div className="basis-0 content-stretch flex gap-6 grow items-center justify-end min-h-px min-w-px relative shrink-0" data-node-id="17:72">
         {/* Icons Group */}
-        <div ref={iconsRef} className="h-10 relative shrink-0 w-28 flex items-center justify-center gap-6" data-name="icons-group" data-node-id="17:73">
+        <div ref={iconsGroupRef} className="h-10 relative shrink-0 w-28 flex items-center justify-center gap-6" data-name="icons-group" data-node-id="17:73">
           <div className="relative shrink-0 size-8" data-name="lucide/share-2" data-node-id="17:74">
             <img alt="" className="block max-w-none size-full" src={imgLucideShare2} />
           </div>
@@ -142,23 +160,23 @@ export default function Header() {
         <div className="h-10 w-px bg-[#d9d8d8]"></div>
         
         {/* Bell Icon */}
-        <div className="relative shrink-0 size-8" data-name="lucide/bell" data-node-id="17:82">
+        <div ref={bellIconRef} className="relative shrink-0 size-8" data-name="lucide/bell" data-node-id="17:82">
           <img alt="" className="block max-w-none size-full" src={imgLucideBell} />
         </div>
         
         {/* User Avatar and Text Container */}
         <div className="flex items-center gap-2">
           {/* User Avatar */}
-          <div className="relative shrink-0 w-16 h-16" data-node-id="17:86">
+          <div ref={userAvatarRef} className="relative shrink-0 w-16 h-16" data-node-id="17:86">
             <img alt="" className="block max-w-none size-full rounded-full" src={imgEllipse1} />
           </div>
           
           {/* User Text */}
-          <div ref={userRef} className="content-stretch flex flex-col font-['Inter',_sans-serif] font-medium gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
-            <div className="relative shrink-0 text-black w-full" data-node-id="17:88">
+          <div className="content-stretch flex flex-col font-['Inter',_sans-serif] font-medium gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
+            <div ref={userNameRef} className="relative shrink-0 text-black w-full" data-node-id="17:88">
               <p className="leading-[normal]">John Smith</p>
             </div>
-            <div className="relative shrink-0 text-[#757575] w-full" data-node-id="17:89">
+            <div ref={userRoleRef} className="relative shrink-0 text-[#757575] w-full" data-node-id="17:89">
               <p className="leading-[normal]">Admin</p>
             </div>
           </div>
