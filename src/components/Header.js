@@ -41,7 +41,6 @@ export default function Header() {
     // Hover animations for interactive elements
     const searchBar = searchRef.current;
     const icons = iconsRef.current?.querySelectorAll('[data-name*="lucide"]');
-    const userSection = userRef.current;
 
     if (searchBar) {
       searchBar.addEventListener('mouseenter', () => {
@@ -63,12 +62,38 @@ export default function Header() {
       });
     }
 
-    if (userSection) {
-      userSection.addEventListener('mouseenter', () => {
-        gsap.to(userSection, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+    // Individual hover animations for separated user elements
+    const bellIcon = headerRef.current.querySelector('[data-node-id="17:82"]');
+    const userAvatar = headerRef.current.querySelector('[data-node-id="17:86"]');
+    const userText = headerRef.current.querySelector('[data-node-id="17:87"]');
+    
+    // Bell icon individual hover
+    if (bellIcon) {
+      bellIcon.addEventListener('mouseenter', () => {
+        gsap.to(bellIcon, { scale: 1.1, duration: 0.3, ease: "power2.out" });
       });
-      userSection.addEventListener('mouseleave', () => {
-        gsap.to(userSection, { scale: 1, duration: 0.3, ease: "power2.out" });
+      bellIcon.addEventListener('mouseleave', () => {
+        gsap.to(bellIcon, { scale: 1, duration: 0.3, ease: "power2.out" });
+      });
+    }
+    
+    // User avatar individual hover
+    if (userAvatar) {
+      userAvatar.addEventListener('mouseenter', () => {
+        gsap.to(userAvatar, { scale: 1.1, duration: 0.3, ease: "power2.out" });
+      });
+      userAvatar.addEventListener('mouseleave', () => {
+        gsap.to(userAvatar, { scale: 1, duration: 0.3, ease: "power2.out" });
+      });
+    }
+    
+    // User text individual hover (opacity change)
+    if (userText) {
+      userText.addEventListener('mouseenter', () => {
+        gsap.to(userText, { opacity: 0.8, duration: 0.3, ease: "power2.out" });
+      });
+      userText.addEventListener('mouseleave', () => {
+        gsap.to(userText, { opacity: 1, duration: 0.3, ease: "power2.out" });
       });
     }
 
@@ -116,22 +141,25 @@ export default function Header() {
         {/* Vertical Divider */}
         <div className="h-10 w-px bg-[#d9d8d8]"></div>
         
-        {/* User Section */}
-        <div ref={userRef} className="content-stretch flex gap-4 items-center justify-start relative shrink-0" data-name="user" data-node-id="17:81">
-          <div className="relative shrink-0 size-8" data-name="lucide/bell" data-node-id="17:82">
-            <img alt="" className="block max-w-none size-full" src={imgLucideBell} />
+        {/* Bell Icon */}
+        <div className="relative shrink-0 size-8" data-name="lucide/bell" data-node-id="17:82">
+          <img alt="" className="block max-w-none size-full" src={imgLucideBell} />
+        </div>
+        
+        {/* User Avatar and Text Container */}
+        <div className="flex items-center gap-2">
+          {/* User Avatar */}
+          <div className="relative shrink-0 w-16 h-16" data-node-id="17:86">
+            <img alt="" className="block max-w-none size-full rounded-full" src={imgEllipse1} />
           </div>
-          <div className="content-stretch flex gap-2 items-center justify-start relative shrink-0" data-name="user" data-node-id="17:85">
-            <div className="relative shrink-0 w-16 h-16" data-node-id="17:86">
-              <img alt="" className="block max-w-none size-full rounded-full" src={imgEllipse1} />
+          
+          {/* User Text */}
+          <div ref={userRef} className="content-stretch flex flex-col font-['Inter',_sans-serif] font-medium gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
+            <div className="relative shrink-0 text-black w-full" data-node-id="17:88">
+              <p className="leading-[normal]">John Smith</p>
             </div>
-            <div className="content-stretch flex flex-col font-['Inter',_sans-serif] font-medium gap-0.5 items-start justify-start leading-[0] not-italic relative shrink-0 text-[16px] min-w-[120px]" data-name="user-name" data-node-id="17:87">
-              <div className="relative shrink-0 text-black w-full" data-node-id="17:88">
-                <p className="leading-[normal]">John Smith</p>
-              </div>
-              <div className="relative shrink-0 text-[#757575] w-full" data-node-id="17:89">
-                <p className="leading-[normal]">Admin</p>
-              </div>
+            <div className="relative shrink-0 text-[#757575] w-full" data-node-id="17:89">
+              <p className="leading-[normal]">Admin</p>
             </div>
           </div>
         </div>
