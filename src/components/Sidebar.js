@@ -74,7 +74,7 @@ export default function Sidebar() {
       
       {/* Navigation */}
       <div className="basis-0 content-stretch flex flex-col gap-4 grow items-start justify-start min-h-px min-w-px relative shrink-0 w-full" data-node-id="17:15">
-        <div className="box-border content-stretch flex flex-col gap-4 items-start justify-start pb-6 pt-0 px-0 relative shrink-0 w-full" data-node-id="17:16">
+        <div className="box-border content-stretch flex flex-col gap-4 items-start justify-start pt-0 px-0 relative shrink-0 w-full" style={{paddingBottom: '1rem'}} data-node-id="17:16">
           <div aria-hidden="true" className="absolute border-[#d9d8d8] border-[0px_0px_1px] border-solid inset-0 pointer-events-none" />
           
           {/* Overview - Active */}
@@ -147,7 +147,7 @@ export default function Sidebar() {
         </div>
         
         {/* Bottom Navigation */}
-        <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full" data-node-id="17:44">
+        <div className="content-stretch flex flex-col gap-4 items-start justify-start relative shrink-0 w-full border-t border-[#d9d8d8]" style={{paddingTop: '2rem'}} data-node-id="17:44">
           <div className="box-border content-stretch flex gap-2.5 items-center justify-start px-4 py-3 relative rounded-[8px] shrink-0 w-full" data-node-id="17:45">
             <div className="relative shrink-0 size-6" data-name="lucide/sticker" data-node-id="17:46">
               <img alt="" className="block max-w-none size-full" src={imgLucideSticker} />
